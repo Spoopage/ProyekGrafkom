@@ -19,8 +19,8 @@ class Car {
 
     loadModel() {
         var loader = new FBXLoader();
-        loader.setPath('./resources/car/');
-        loader.load('r35.fbx', (fbx) => {
+        loader.setPath('./resources/car/low_poly_car/Car-Model/');
+        loader.load('Car.fbx', (fbx) => {
             fbx.scale.setScalar(0.01);
             fbx.traverse(c => {
                 c.castShadow = true;
@@ -40,9 +40,9 @@ class Car {
             };
 
             var loader = new FBXLoader();
-            loader.setPath('./resources/car/');
-            loader.load('r35.fbx', (fbx) => { onLoad('idle', fbx) });
-            loader.load('r35.fbx', (fbx) => { onLoad('run', fbx) });
+            loader.setPath('./resources/car/low_poly_car/Car-Model/');
+            loader.load('Car.fbx', (fbx) => { onLoad('idle', fbx) });
+            loader.load('Car.fbx', (fbx) => { onLoad('run', fbx) });
         });
     }
 
